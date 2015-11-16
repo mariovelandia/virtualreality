@@ -1,18 +1,212 @@
-# Web VR Starter Kit
+Universidad de los Andes
+Proyecto Final: Realidad Virtual
+Perspectiva & Descriptiva
+Mario Velandia Rodriguez | 201511221
 
-Web VR Starter Kit is a Javascript library for easily creating virtual reality content and making it available in web browsers on a range of devices. The library includes a simplified API for creating an manipulating 3D objects.
 
-## Examples
+## Indice
 
-- [Panorama](https://povdocs.github.io/webvr-starter-kit/examples/panorama.html) - Loading a spherical panoramic photo
-- [Animation](https://povdocs.github.io/webvr-starter-kit/examples/animation.html) - Simple animation, moving and rotating objects
-- [Sky](https://povdocs.github.io/webvr-starter-kit/examples/sky.html) - A realistic daytime sky with movable sun and lighting
-- [Sound](https://povdocs.github.io/webvr-starter-kit/examples/sound.html) - Audio sources in 3D space, triggered by looking at objects
-- [Video](https://povdocs.github.io/webvr-starter-kit/examples/video.html) - A video playing on a flat surface.
-- [Near and Far](https://povdocs.github.io/webvr-starter-kit/examples/near.html) - Fire events when an object moves close to or far away from the viewer
-- [3D Panorama](https://povdocs.github.io/webvr-starter-kit/examples/panorama3d.html) - Loading a stereoscopic spherical panoramic photo
-- [3D Spherical Video](https://povdocs.github.io/webvr-starter-kit/examples/video-sphere.html) - A stereoscopic spherical video
-- [Text](https://povdocs.github.io/webvr-starter-kit/examples/text.html) - 2D text in 3D space
+- Introduccion 
+- Objetivos del proyecto
+- Desarrollo del proyecto
+-- Estructura de archivos del proyecto.
+-- Instrucciones para visualizar el aplicativo.
+-- Instrucciones para desarrollar nuevo contenido.
+-- Análisis e instrucciones de cada medio.
+- Licencias
+- Bibliografía
+
+
+## Introducción
+
+Realidad Virtual, también conocida como Multimedia Inmersiva ó Simulación Computarizada de la Vida, replica un entorno de un individuo que está físicamente presente en otra parte del mundo o mundos imaginados y animados. Creando asi la sensacion para quien está visualizando que está en otro sitio. La verdadera inmersión requiere de gafas estereoscópicas sin embargo se puede visualizar sin la utilización de las mismas, ya que sus componentes principales son el giroscopio y el acelerómetro que están integrados en el dispositivo móvil y no en las gafas. 
+
+Los primeros rastro del concepto fueron en 1938, donde Antonin Artaud publico su libro “Le Théâtre et son double” utilizando el término realidad virtual para referirse a la ilusoria naturaleza de los personajes y objetos del Teatro. Más adelante, en 1982 el novelista Damien Broderik utilizó el término en su novela de ciencia ficción The Judas Mandala. 1987 el Oxford English Dictionary, cito un articulo sobre Realidad Virtual, sin embargo este artículo no tenia referencia a Tecnología de Realidad Virtual. No fue sino hasta 1990 que Jaron Lanier popularizó el concepto de realidad virtual tal como lo conocemos actualmente y como fue descrito en el anterior párrafo. El con su empresa, VPL Research, patentaron los primeros objetos de realidad virtual.
+
+Sin embargo, el desarrollo de las tecnologías que VR utiliza se remontan a años anteriores a la historia recién contada sobre el concepto de Realidad Virtual. En la foto a la izquierda se muestra el View-Master, el simulador de visión estereoscópica que fue introducido en 1939. Asimismo las otras tecnologías que se emplean fueron desarrolladas en años previos a la historia del nacimiento del concepto de realidad virtual, esplicada en este documento. 
+
+Los usos que hoy en dia son variados y estan en constante avance. Uno de estos usos, es usar realidad.virtual con fines educativos, por medio de contenido que permita a su usuario aprender mientras explora, ya sea a través de un juego o de videos. Un ejemplo de lo anterior es virtonomics.com un juego que permite simular la creacion de una empresa y su desarrollo, con fines educativos en profesiones como administracion de negocios e ingeneria industrial. Otro uso, es el uso para entrenamiento a profesionales que se desee mejorar sus habilidades sin arriesgar el éxito de la operacion real. Ejemplos de lo anterior encontramos en las fuerzas militares y en medicina entre otros. Otro uso, es el de videojuegos, experiencia que por lo general a parte de la experiencia visual requieren de la auditiva y la acción física del usuario. Los ejemplos más claros son: Virtual Boy desarrollado por Nintendo. Kinect desarrollado por Microsoft para el XBOX y el PS EYE desarrollado por Sony para el Play Station 3. 
+
+Adicionalmente, realidad virtual es utilizada para fines artísticos. Entre las obras reconocidas se encuentran las del artista Jeffrey Shaw en sus trabajos Legible City (1989), Virtual Museum (1991) y Golden Calf (1994). Por otro lado, tiene usos en arqueología y herencia de cultura, un claro ejemplo, es la reconstrucción en animación, para realidad virtual, del castillo Dudley de Inglaterra en 1550. Continuando con los usos, realidad virtual es en gran medida utilizada para urbanismo. Por último uso para terapias, principalmente terapias para fobias.
+
+
+## Objetivos del Proyecto
+
+Este proyecto tiene como objetivo entender y aplicar la tecnología de realidad virtual para: imágenes, videos, animaciones, texto y sonido. Medios que componen los variados usos expuestos en el párrafo introductorio.
+
+Adicionalmente este proyecto tiene como fin, ser una herramienta documentada para todo aquel que desee crear espacios de realidad virtual, sin necesidad que posean conocimientos avanzados de programación. 
+
+
+## Desarrollo del Proyecto
+
+Para realizar este proyecto se utilizará una librería de Javascript que permite crear contenido de realidad virtual para dispositivos móviles y navegadores de internet mediante el uso de: Oculus Rift; Google Cardboards; Dispositivos móviles y tablets; ó navegadores de internet, controlando el movimiento con el mouse. En primer lugar se explicará la estructura de los archivos del aplicativo de este proyecto. En segundo lugar, analizaremos cada uno de los medios expuestos en nuestros objetivos.
+
+## Estructura de archivos del aplicativo
+
+- | build | :: Archivos principales de las librerías utilizada para realidad virtual.
+       | image | :: Incluir imágenes de materiales.
+	    - asphalt.jpg :: Asfalto.
+ 	    - brick-tiles.jpg :: Ladrillos sin textura en cuadrícula.
+	    - bricks-normal.jpg :: Textura de ladrillos en negativo.
+	    - bricks-spectacular.jpg :: Textura de ladrillos en positivo.
+	    - bricks.jpg :: Resultado final. Ladrillos.
+	    - grass.jpg :: Pasto.
+	    - metal-floor.jpg :: Piso Metalico.
+	    - stone.jpg :: Piedra.
+	    - titles.jpg :: Baldocin.
+	    - weathered-wood.jpg :: Madera oscura humeda.
+	    - wood.jpg :: Madera. 
+       - vr.js :: Código principal de la aplicación. Une los archivos según lo solicitado.
+       - vr.js.map :: Mapa en JSON de los archivos del sitio.
+| config | :: Archivos de configuración del proyecto.
+       - index.js :: Variables y funciones básicas del proyecto.
+| apps | :: Carpeta contenedora de los archivos creadores de los medios planteados.
+        | assets | :: Carpeta contenedora de medios. Imagenes, videos, sonidos.
+| src | :: Carpeta de Archivos base.
+       | css |
+              - style.css :: Documento encargado de las propiedades visuales.
+       | images |
+       | lib |
+              - ThreeAudio.js :: Archivo requerido para la funcionalidad del sonido.
+	  - VRControls.js :: Archivo para incluir los controladores del aplicativo
+	  - VRStereoEffect.js :: Archivo encargado de crear el efecto estereoscópico.
+       | objects |
+	  - box.js :: Código requerido para crear cajas.
+	  - cylinder.js :: Código requerido para crear cilindros.
+	  - empty.js :: Código requerido para vaciar el canvas.
+	  - floor.js :: Código requerido para crear el suelo del aplicativo.
+	  - grid.js  :: Código requerido para crear la cuadrícula.
+	  - image.js :: Código requerido para utilizar imágenes.
+	  - panorama.js :: Código requerido para utilizar imágenes panorámicas.
+	  - sound.js  :: Código requerido para utilizar sonido.
+	  - text.js :: Código requerido para crear texto.
+	  - video.js :: Código requerido para utilizar videos..
+       | utils |
+       - entry.js
+       - materials.js :: Archivo que administra los materiales a utilizar.
+       - vr-object.js :: Incluir y utilizar los objetos de programación de la carpeta “objects”.
+       - vr.js :: Código principal de la aplicación. Une los archivos según lo solicitado.
+- .gitignore :: Evita que archivos sean eliminados del repositorio público en github.com.
+- LICENSE.md :: Clarificaciones acerca de la licencia del codigo.
+- README.md :: Instrucciones iniciales respecto el Proyecto.
+- bower.json :: Intervenir configuraciones de dispositivos móviles. Desactivar modo reposo.
+- gulpfile.js ::  Incluir libreria GULP, optimizador de archivos web entre otras funciones.
+- package.json :: Archivo para incluir todas las librerías necesarias para el proyecto.
+
+
+## Instrucciones para visualizar el aplicativo
+
+El aplicativo se puede visualizar ingresando desde un dispositivo móvil a través de los exploradores de navegación: Safari, Google Chrome & Firefox. Ingresando la siguiente URL
+
+[http://realidadvirtual.thetruego.com](http://realidadvirtual.thetruego.com)
+
+Sin embargo, si usted posee un dispositivo IOS o ANDROID lo invitamos a descargar la app:
+
+FREE Full Screen Private Browsing Web Browser  |  By SavySoda
+Esta app le permitirá navegar y colocar la app en pantalla completa para evitar la visualización de otros elementos del explorador diferentes a los de nuestra aplicación..
+
+## Instrucciones para desarrollar nuevo contenido.
+
+En caso que desee desarrollar su propio contenido a partir de este proyecto, encuentre a continuación las instrucciones para cumplir con los requerimientos necesarios para visualizar los archivos entregados con este proyecto.
+
+### Instrucciones para equipos WINDOWS
+
+Sistema operativos compatibles: Windows 10, Windows 8.1 or Windows 7,
+Debe tener un mínimo de  2GB de RAM, & 2GB de espacio en el computador.
+Dirigirse a: [https://www.mamp.info/en/downloads/](https://www.mamp.info/en/downloads/)
+Descargar la versión para WINDOWS. 
+Luego de abrir el archivo descargado, siga las instrucciones para la instalación.
+Una vez la instalación ha finalizado, asegurarse que los puertos en la pagina de ajustes están configurados:
+Apache  :  8888
+MSQL   :   8889
+Descargue un editor de código, sugerimos: Sublime Text, Brackets o Dreamweaver.
+
+### Instrucciones para equipos MAC OS
+
+Sistema Operativo: Mac OS X 10.6.8 & 64-Bit processor (Intel).
+2GB de espacio disponible en el disco duro.
+Dirigirse a: [https://www.mamp.info/en/downloads/](https://www.mamp.info/en/downloads/)
+Descargar la versión para MAC OS
+Luego de abrir el archivo descargado, siga las instrucciones para la instalación.
+Una vez la instalación ha finalizado, asegurarse que los puertos en la pagina de ajustes están configurados:
+Apache  :  8888
+MSQL   :   8889
+Descargue un editor de código, sugerimos: Sublime Text, Brackets o Dreamweaver.
+
+Luego de terminar los pasos anteriores. En Preferencias seleccione la pestaña de Servidor Web, dentro de esta pestaña Cambie la Raíz de Documentos a la carpeta donde guardó los archivos de este proyecto. 
+
+Para finalizar, y de aquí en adelante solo tendrá que abrir MAMP e iniciar los servidores dando clic en Iniciar Servidores asegurándose que los indicadores en la esquina superior derecha (Servidor Apache & Servidor MYSQL) estén encendidos y muestre el cuadrado, que acompaña cada uno de estos, verde.
+
+Estando los servidores correctamente configurados e iniciados, diríjase a uno de los siguientes exploradores: Google Chrome, Safari o Firefox.  En el campo de URL escriba:
+
+	http://localhost  ó  http://localhost:8888
+
+En este momento, ya debe estar visualizando el aplicativo. En caso contrario dirijase a [https://www.mamp.info/en/documentation/](https://www.mamp.info/en/documentation/) ó escriba a m.velandia10@uniandes.edu.co adjuntando informacion como capturas de pantallas del error que le aparece.
+
+
+## Análisis e instrucciones de cada medio.
+
+### Imagenes
+
+### Videos
+
+### Texto
+
+### Sonido
+
+### Animaciones
+
+
+
+## Licencias & Derechos de Autor
+
+El código original ha sido puesto a disposición pública por medio de la licencia MIT. Copyright © 2015 American Documentary Inc.
+
+### Software License (MIT)
+
+Copyright (c) 2015 American Documentary Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### Licencias de las Texturas
+
+Bricks [http://textures.thefree3dmodels.com/stuff/brick/bricks_diffuse/2-1-0-688](http://textures.thefree3dmodels.com/stuff/brick/bricks_diffuse/2-1-0-688) Attribution-Noncommercial-Share Alike 3.0 Unported License
+Wood [http://textures.thefree3dmodels.com/stuff/wood/free_wood_texture_tilable/36-1-0-681](http://textures.thefree3dmodels.com/stuff/wood/free_wood_texture_tilable/36-1-0-681) Attribution-Noncommercial-Share Alike 3.0 Unported License
+Weathered Wood [http://freeseamlesstextures.com/gallery/45-weathered-wood-background.html](http://freeseamlesstextures.com/gallery/45-weathered-wood-background.html) Creative Commons Attribution 3.0 United States
+Asphalt [http://freeseamlesstextures.com/gallery/41-black-asphalt-background.html](http://freeseamlesstextures.com/gallery/41-black-asphalt-background.html) Creative Commons Attribution 3.0 United States
+Stone [http://freeseamlesstextures.com/gallery/12-natural-stone-background.html](http://freeseamlesstextures.com/gallery/12-natural-stone-background.html) Creative Commons Attribution 3.0 United States
+Tiles [http://www.brusheezy.com/textures/22875-10-seamless-ceramic-tiles-textures](http://www.brusheezy.com/textures/22875-10-seamless-ceramic-tiles-textures) Creative Commons Attribution 3.0 Unported License
+Brick Tiles [http://www.brusheezy.com/textures/22875-10-seamless-ceramic-tiles-textures](http://www.brusheezy.com/textures/22875-10-seamless-ceramic-tiles-textures) Creative Commons Attribution 3.0 Unported License
+Metal Floor [http://agf81.deviantart.com/art/Seamless-Floor-Special-322523166](http://agf81.deviantart.com/art/Seamless-Floor-Special-322523166) Creative Commons Attribution 3.0 License
+Metal [http://hhh316.deviantart.com/art/Seamless-metal-texture-smooth-164165216](http://hhh316.deviantart.com/art/Seamless-metal-texture-smooth-164165216) Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License
+Grass [http://seamlesstextures.deviantart.com/art/Seamless-grass-texture-163548160](http://seamlesstextures.deviantart.com/art/Seamless-grass-texture-163548160) Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 License
+
+Derechos de Autor del código base para el desarrollo de este proyecto: Brian Chrils, desarrollador del concepto, código y diseño, de POV Digital Technology Fellow.
+
+
+## Bibliografía
+
+Brooks Jr., F. P. (1999). "What's Real About Virtual Reality?", IEEE Computer Graphics And Applications, 19(6), 16
+Cline, Mychilo Stephenson (2005). Power, Madness, & Immortality: the Future of Virtual Reality. Virtualreality.universityvillagepress.com. Retrieved 2009-10-28.
+Rheingold, Howard (1991). Virtual Reality. ISBN 0-262-68121-8.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Getting Started
 
