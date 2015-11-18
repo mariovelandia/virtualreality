@@ -1,6 +1,9 @@
 Universidad de los Andes
+
 Proyecto Final: Realidad Virtual
+
 Perspectiva & Descriptiva
+
 Mario Velandia Rodriguez | 201511221
 
 
@@ -9,10 +12,15 @@ Mario Velandia Rodriguez | 201511221
 - Introduccion 
 - Objetivos del proyecto
 - Desarrollo del proyecto
--- Estructura de archivos del proyecto.
--- Instrucciones para visualizar el aplicativo.
--- Instrucciones para desarrollar nuevo contenido.
--- Análisis e instrucciones de cada medio.
+
+	- Estructura de archivos del proyecto.
+
+	- Instrucciones para visualizar el aplicativo.
+
+	- Instrucciones para desarrollar nuevo contenido.
+
+	- Análisis e instrucciones de cada medio.
+
 - Licencias
 - Bibliografía
 
@@ -44,54 +52,103 @@ Para realizar este proyecto se utilizará una librería de Javascript que permit
 ## Estructura de archivos del aplicativo
 
 - | build | :: Archivos principales de las librerías utilizada para realidad virtual.
+
        | image | :: Incluir imágenes de materiales.
+
 	    - asphalt.jpg :: Asfalto.
+
  	    - brick-tiles.jpg :: Ladrillos sin textura en cuadrícula.
+
 	    - bricks-normal.jpg :: Textura de ladrillos en negativo.
+
 	    - bricks-spectacular.jpg :: Textura de ladrillos en positivo.
+
 	    - bricks.jpg :: Resultado final. Ladrillos.
+
 	    - grass.jpg :: Pasto.
+
 	    - metal-floor.jpg :: Piso Metalico.
+
 	    - stone.jpg :: Piedra.
+
 	    - titles.jpg :: Baldocin.
+
 	    - weathered-wood.jpg :: Madera oscura humeda.
+
 	    - wood.jpg :: Madera. 
+
        - vr.js :: Código principal de la aplicación. Une los archivos según lo solicitado.
+
        - vr.js.map :: Mapa en JSON de los archivos del sitio.
+
 | config | :: Archivos de configuración del proyecto.
+
        - index.js :: Variables y funciones básicas del proyecto.
+
 | apps | :: Carpeta contenedora de los archivos creadores de los medios planteados.
+
         | assets | :: Carpeta contenedora de medios. Imagenes, videos, sonidos.
+
 | src | :: Carpeta de Archivos base.
+
        | css |
+
               - style.css :: Documento encargado de las propiedades visuales.
+
        | images |
+
        | lib |
+
               - ThreeAudio.js :: Archivo requerido para la funcionalidad del sonido.
+
 	  - VRControls.js :: Archivo para incluir los controladores del aplicativo
+
 	  - VRStereoEffect.js :: Archivo encargado de crear el efecto estereoscópico.
+
        | objects |
+
 	  - box.js :: Código requerido para crear cajas.
+
 	  - cylinder.js :: Código requerido para crear cilindros.
+
 	  - empty.js :: Código requerido para vaciar el canvas.
+
 	  - floor.js :: Código requerido para crear el suelo del aplicativo.
+
 	  - grid.js  :: Código requerido para crear la cuadrícula.
+
 	  - image.js :: Código requerido para utilizar imágenes.
+
 	  - panorama.js :: Código requerido para utilizar imágenes panorámicas.
+
 	  - sound.js  :: Código requerido para utilizar sonido.
+
 	  - text.js :: Código requerido para crear texto.
+
 	  - video.js :: Código requerido para utilizar videos..
+
        | utils |
+
        - entry.js
+
        - materials.js :: Archivo que administra los materiales a utilizar.
+
        - vr-object.js :: Incluir y utilizar los objetos de programación de la carpeta “objects”.
+
        - vr.js :: Código principal de la aplicación. Une los archivos según lo solicitado.
+
 - .gitignore :: Evita que archivos sean eliminados del repositorio público en github.com.
+
 - LICENSE.md :: Clarificaciones acerca de la licencia del codigo.
+
 - README.md :: Instrucciones iniciales respecto el Proyecto.
+
 - bower.json :: Intervenir configuraciones de dispositivos móviles. Desactivar modo reposo.
+
 - gulpfile.js ::  Incluir libreria GULP, optimizador de archivos web entre otras funciones.
+
 - package.json :: Archivo para incluir todas las librerías necesarias para el proyecto.
+
 
 
 ## Instrucciones para visualizar el aplicativo
